@@ -9,10 +9,15 @@
 * Library [xgboost](https://xgboost.readthedocs.io/en/latest/get_started.html) library 1.1.1 or newer
 
 **Files description**
+*  **ProjectListMSR**: contains the list of Java experiment projects along with their versions.
 *  **data** 
 	*  **experiment_dataset** folder contains the labeled dataset of clean and buggy files that have performance bugs in the 80 studied GitHub projects. Each project has a separate folder.
 	* **issue_reports** folder contains the sample data of the non-performance bug reports and performance bug reports.
 *  **python_scripts** folder contains the scripts for evaluating the performance machine learning algorithms and calculating the effects of metrics. 
+    * **calculate_process_metrics_file** contains the script for calculating the process metrics for the experiment projects.
+    * **calculate_proposed_metrics** contains the script for calculating the proposed performance code metrics for the experiment projects.
+    * **overall_proposed_metrics** contains the script for running the above calculating script automatically for each experiment project
+    * **collect_changesets** contains the script for collecting the commits and the changed files in commits for the experiment projects.
     * **algorithms_comparison.py** contains the script for training and evaluating the performance of machine learning algorithms for predicting performance bugs.
     * **metrics_effects** contains the script for calculating the effects of metrics on the performance bug prediction models.
 *  **samples_of_prediction** folder contains the samples of predicted performance bug files by the trained Random Forest models.
